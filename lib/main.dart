@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/source/create_account.dart';
+import 'package:food_delivery/source/food_home.dart';
 import 'package:food_delivery/source/forgot_password.dart';
 import 'package:food_delivery/source/get_started.dart';
 import 'package:food_delivery/source/login.dart';
@@ -19,6 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Monkey Delivery App',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(color: Colors.white),
         pageTransitionsTheme: PageTransitionsTheme(builders: {
           TargetPlatform.android: CupertinoPageTransitionsBuilder(),
           TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
@@ -26,9 +29,9 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.latoTextTheme(
           Theme.of(context).textTheme,
         ),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
-      home: StartHome(),
+      home: FoodHomePage(),
     );
   }
 }
